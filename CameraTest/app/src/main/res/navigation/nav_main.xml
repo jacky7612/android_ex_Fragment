@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.cameratest.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_captureFragment"
+            app:destination="@id/captureFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_vedioFragment"
+            app:destination="@id/vedioFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_audioFragment"
+            app:destination="@id/audioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/captureFragment"
+        android:name="com.example.cameratest.CaptureFragment"
+        android:label="fragment_capture"
+        tools:layout="@layout/fragment_capture" >
+        <action
+            android:id="@+id/action_captureFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.example.cameratest.AudioFragment"
+        android:label="fragment_audio"
+        tools:layout="@layout/fragment_audio" >
+        <action
+            android:id="@+id/action_audioFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vedioFragment"
+        android:name="com.example.cameratest.VedioFragment"
+        android:label="fragment_vedio"
+        tools:layout="@layout/fragment_vedio" >
+        <action
+            android:id="@+id/action_vedioFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>

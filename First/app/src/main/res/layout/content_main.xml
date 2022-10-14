@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment_content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/tvShowMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="我方出拳"
+        app:layout_constraintStart_toEndOf="@+id/tvShowVictory"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <TextView
+        android:id="@+id/tvShowPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="電腦出拳"
+        app:layout_constraintStart_toEndOf="@+id/tvShowMe"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <TextView
+        android:id="@+id/tvShowVictory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="勝利者"
+        app:layout_constraintStart_toEndOf="@+id/tvShowName"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <EditText
+        android:id="@+id/ebName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="請輸入玩家姓名"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="請輸入姓名以開始遊戲"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/ebName"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <RadioGroup
+        android:id="@+id/rgContext"
+        android:layout_width="359dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="26dp">
+
+        <RadioButton
+            android:id="@+id/rbScissor"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="剪刀" />
+
+        <RadioButton
+            android:id="@+id/rbStone"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="石頭" />
+
+        <RadioButton
+            android:id="@+id/rbPaper"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="布" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="猜拳"
+        app:layout_constraintTop_toBottomOf="@+id/rgContext"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="31dp" />
+
+    <TextView
+        android:id="@+id/tvShowName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="名字"
+        app:layout_constraintTop_toBottomOf="@+id/btStart"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="34dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
